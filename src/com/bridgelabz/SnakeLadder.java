@@ -13,7 +13,7 @@ public class SnakeLadder {
 		int diceValue=(int) Math.floor((Math.random()*6) + 1);
 		
 		//check the dice value
-		System.out.println(diceValue);
+		System.out.println("diceValue: "+diceValue);
 		
 		//random number for no play ladder and snake
 		int checkOption = (int)(Math.random() * 10) % 3 + 1;
@@ -29,6 +29,9 @@ public class SnakeLadder {
 			// case for snake 
 			case 2:
 				startPosition = startPosition - diceValue;
+				if(startPosition < 0) {
+					startPosition = 0;
+				}
 				break;
 			// case for not playing
 			default:
