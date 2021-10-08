@@ -6,6 +6,7 @@ public class SnakeLadder {
 		
 		// start position is zero
 		int startPosition = 0;
+		int count = 0 ;
 		
 		System.out.println("start position: " + startPosition);
 		
@@ -24,6 +25,8 @@ public class SnakeLadder {
 			//check the random value
 			System.out.println("check "+checkOption);
 			
+			count++;
+			
 			switch(checkOption) {
 				// case for ladder
 				case 1:
@@ -31,6 +34,7 @@ public class SnakeLadder {
 					if(startPosition > 100) {
 						startPosition = startPosition -diceValue;
 					}
+					
 					break;
 				// case for snake 
 				case 2:
@@ -46,6 +50,8 @@ public class SnakeLadder {
 			// check position after player choode a option 
 			System.out.println("position after  player choose a option : "+startPosition);
 		}
+		System.out.println("total counter to win came: "+count);
+		System.out.println("player position:" +startPosition);
 	}
 	
 	
